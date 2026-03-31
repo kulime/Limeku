@@ -72,7 +72,7 @@ const highlightedPublications: PublicationItem[] = [
 ];
 
 const journalPublications: Publication[] = [
-  {
+    {
     title: 'Recent Progress of Oxide Semiconductor-Based Artificial Synaptic Transistors',
     authors: 'Sein Lee, Jeong-Min Park, Wooho Ham, Junseo Lee, Gyeong-Hun Hwang, Seok Daniel Namgung, Min-Kyu Song, Jang-Yeon Kwon*',
     journal: 'ACS Applied Electronic Materials',

@@ -1,0 +1,384 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* LIME Laboratory Design System
+   Clean, minimalist academic aesthetic inspired by FLEX Lab
+   Pure white backgrounds, deep charcoal text, crimson accents
+*/
+
+@layer base {
+  :root {
+    /* Core Colors - Academic Minimalist Palette */
+    --background: 0 0% 100%;
+    --foreground: 220 20% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 20% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 20% 10%;
+
+    /* Deep Charcoal - Primary Text */
+    --primary: 220 20% 10%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Light Gray - Secondary */
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 220 20% 10%;
+
+    /* Muted - Subtle backgrounds */
+    --muted: 0 0% 96%;
+    --muted-foreground: 220 10% 45%;
+
+    /* Crimson Red - Accent Color */
+    --accent: 348 83% 47%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Destructive */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Borders */
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 348 83% 47%;
+
+    --radius: 0.25rem;
+
+    /* Custom Design Tokens */
+    --nav-height: 80px;
+    --section-padding: 6rem;
+    --container-max: 1750px;
+
+    /* Typography */
+    --font-display: 'Inter', sans-serif;
+    --letter-spacing-tight: -0.02em;
+    --letter-spacing-normal: -0.01em;
+
+    /* Transitions */
+    --transition-fast: 150ms ease;
+    --transition-normal: 300ms ease;
+    --transition-slow: 500ms ease;
+
+    /* Shadows - Minimal */
+    --shadow-subtle: 0 1px 2px 0 hsl(0 0% 0% / 0.03);
+    --shadow-card: 0 4px 6px -1px hsl(0 0% 0% / 0.05);
+
+    /* Sidebar defaults */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 220 10% 25%;
+    --sidebar-primary: 220 20% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 0 0% 95%;
+    --sidebar-accent-foreground: 220 20% 10%;
+    --sidebar-border: 0 0% 90%;
+    --sidebar-ring: 348 83% 47%;
+  }
+
+  .dark {
+    --background: 220 20% 5%;
+    --foreground: 0 0% 98%;
+
+    --card: 220 20% 8%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 220 20% 8%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 220 20% 10%;
+
+    --secondary: 220 15% 15%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 220 15% 15%;
+    --muted-foreground: 220 10% 60%;
+
+    --accent: 348 83% 47%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 220 15% 20%;
+    --input: 220 15% 20%;
+    --ring: 348 83% 47%;
+
+    --sidebar-background: 220 20% 8%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 348 83% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 15% 12%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 220 15% 15%;
+    --sidebar-ring: 348 83% 47%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: var(--font-display);
+    letter-spacing: var(--letter-spacing-normal);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    letter-spacing: var(--letter-spacing-tight);
+    @apply font-semibold text-foreground;
+  }
+}
+
+@layer components {
+  /* Navigation Styles - Enhanced */
+  .nav-link {
+    @apply relative py-2 text-base font-semibold tracking-wide transition-colors duration-300;
+  }
+
+  .nav-link::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-accent transition-all duration-300;
+  }
+
+  .nav-link:hover::after,
+  .nav-link.active::after {
+    @apply w-full;
+  }
+
+  /* Hero overlay gradient */
+  .hero-overlay {
+    background: linear-gradient(
+      to bottom,
+      hsl(0 0% 0% / 0.4) 0%,
+      hsl(0 0% 0% / 0.6) 100%
+    );
+  }
+
+  /* Section container */
+  .section-container {
+    @apply mx-auto px-6 lg:px-8;
+    max-width: var(--container-max);
+  }
+
+  /* Section padding */
+  .section-padding {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+  }
+
+  /* Reduced top padding for sub-page content (below sub-tab bar) */
+  .section-padding-tight {
+    padding-top: 2.5rem;
+    padding-bottom: var(--section-padding);
+  }
+
+  /* Research card hover effect */
+  .research-card {
+    @apply relative overflow-hidden transition-all duration-500 cursor-pointer;
+  }
+
+  .research-card::before {
+    content: '';
+    @apply absolute inset-0 bg-accent opacity-0 transition-opacity duration-500 z-10;
+  }
+
+  .research-card:hover::before {
+    @apply opacity-10;
+  }
+
+  /* Member card */
+  .member-card {
+    @apply bg-background transition-all duration-300;
+  }
+
+  .member-card:hover {
+    box-shadow: var(--shadow-card);
+  }
+
+  /* Publication item */
+  .publication-item {
+    @apply py-6 border-b border-border transition-colors duration-300;
+  }
+
+  .publication-item:hover {
+    @apply bg-secondary/50;
+  }
+
+  /* Footer with light gray background */
+  .footer-gray {
+    @apply bg-secondary text-foreground;
+  }
+
+  /* Page title - centered with enhanced typography */
+  .page-title {
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter text-center text-primary-foreground;
+  }
+
+  /* Page header with hero background - expanded vertical space */
+  .page-header {
+    @apply relative pt-40 pb-24 md:pt-48 md:pb-32 bg-cover bg-center bg-no-repeat;
+  }
+
+  .page-header::before {
+    content: '';
+    @apply absolute inset-0 bg-foreground/70;
+  }
+
+  .page-header-content {
+    @apply relative z-10;
+  }
+
+  /* Sub-tab navigation - comfortable padding with light gray background */
+  .sub-tab-bar {
+    @apply bg-secondary py-3;
+  }
+
+  .sub-tab-button {
+    @apply pt-3 pb-2 text-base md:text-lg font-semibold tracking-wide whitespace-nowrap border-b-2 transition-colors;
+  }
+
+  .sub-tab-button.active {
+    @apply border-accent text-foreground;
+  }
+
+  .sub-tab-button:not(.active) {
+    @apply border-transparent text-muted-foreground hover:text-foreground;
+  }
+
+  /* Research topic card with hover effect */
+  .research-topic-card {
+    @apply transition-all duration-300 cursor-pointer;
+  }
+
+  /* Thicker border utility */
+  .border-3 {
+    border-width: 3px;
+  }
+
+  /* Research image shadow */
+  .research-image-shadow {
+    box-shadow: 0 10px 30px -5px hsl(0 0% 0% / 0.15);
+  }
+
+  /* Recruitment callout box */
+  .recruitment-box {
+    @apply bg-secondary p-8 md:p-12;
+  }
+
+  /* Smooth page transitions */
+  .page-enter {
+    @apply opacity-0 translate-y-4;
+  }
+
+  .page-enter-active {
+    @apply opacity-100 translate-y-0 transition-all duration-500;
+  }
+}
+
+@layer utilities {
+  /* Text utilities */
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Gradient text - for special headlines */
+  .gradient-text {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(
+      135deg,
+      hsl(var(--foreground)) 0%,
+      hsl(var(--muted-foreground)) 100%
+    );
+  }
+
+  /* Fade in animation - slower for elegance */
+  .animate-fade-in {
+    animation: fadeIn 1.5s ease forwards;
+  }
+
+  /* Slide up with fade - premium slow entrance */
+  .animate-slide-up-fade {
+    animation: slideUpFade 2.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+
+  /* Sequential fade - image first, then text */
+  .animate-fade-in-image {
+    animation: fadeInImage 1.8s ease forwards;
+  }
+
+  .animate-fade-in-text {
+    animation: fadeInText 1.5s ease forwards;
+    animation-delay: 0.6s;
+    opacity: 0;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideUpFade {
+    from {
+      opacity: 0;
+      transform: translateY(40px) scale(0.98);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  @keyframes fadeInImage {
+    from {
+      opacity: 0;
+      transform: scale(0.98);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes fadeInText {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Stagger children animation delay */
+  .stagger-1 { animation-delay: 100ms; }
+  .stagger-2 { animation-delay: 200ms; }
+  .stagger-3 { animation-delay: 300ms; }
+  .stagger-4 { animation-delay: 400ms; }
+  .stagger-5 { animation-delay: 500ms; }
+
+  /* Image zoom effect */
+  .image-zoom {
+    @apply transition-transform duration-700 ease-out;
+  }
+
+  .group:hover .image-zoom {
+    transform: scale(1.1);
+  }
+}

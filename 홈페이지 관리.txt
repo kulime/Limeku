@@ -1,0 +1,15 @@
+홈페이지 관리
+닉네임: Limeku
+
+Vercel
+Github
+
+
+코드 수정
+npm run dev  //홈페이지 수정 시뮬, Ctrl 주소 클릭해서 확인
+Ctrl c  //나가기
+
+//홈페이지 수정
+git add .
+git commit -m "수정사항"
+git push 

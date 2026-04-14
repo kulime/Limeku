@@ -81,7 +81,7 @@ const journalPublications: Publication[] = [
     doi: 'https://pubs.acs.org/doi/full/10.1021/acsaelm.5c01798',
     },
     {
-    title: 'Recent Progress of Proton Involvement and Coupling for Bio-realistic Synaptic Device',
+    title: 'Recent Progress in Proton Involvement and Coupling for Bio-realistic Synaptic Device',
     authors: 'Yubeen Park, Jung-El Ryu, Seok Daniel Namgung*, Min-Kyu Song*',
     journal: 'Nanoscale',
     volume: 'Vol.18, 145-158 (2026)',

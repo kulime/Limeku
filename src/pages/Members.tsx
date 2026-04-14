@@ -34,8 +34,8 @@ const professor = {
 };
 
 const currentMembers: MemberProps[] = [
-  { name: 'Gyeong-Hun Hwang', role: 'Integrated M.S. & Ph.D. student', email: 'ghhwang12@korea.ac.kr', researchField: 'Oxide Channel based Ferroelectric Devices', image: hwang},
-  { name: 'Yeong-In Kim', role: 'M.S. Student', email: 'yeonginkim1325@korea.ac.kr', researchField: '2D Material Devices'},
+  { name: 'Gyeong-Hun Hwang', role: 'Integrated M.S. & Ph.D. student', email: 'ghhwang12@korea.ac.kr', researchField: 'Oxide Semiconductor & Ferroelectric Devices', image: hwang},
+  { name: 'Yeong-In Kim', role: 'M.S. Student', email: 'yeonginkim1325@korea.ac.kr', researchField: 'Synaptic Devices & 2D Material Devices'},
 ];
 
 const alumni: MemberProps[] = [

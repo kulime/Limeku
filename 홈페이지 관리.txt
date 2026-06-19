@@ -4,8 +4,12 @@
 Vercel
 Github
 
+visual studio code 들어가기
+open folder로 웹사이트 파일 열기
+
 
 코드 수정
+
 npm run dev  //홈페이지 수정 시뮬, Ctrl 주소 클릭해서 확인
 Ctrl c  //나가기
 

@@ -3,6 +3,14 @@ import { Link } from 'react-router-dom';
 
 const newsItems = [
   {
+    day: '16',
+    month: '09',
+    year: '2026',
+    category: 'Publication',
+    title: "Yeong-In Kim's Paper Accepted in Advanced Science",
+    description: "Congratulations to Yeong-In Kim! Her paper, 'Ultralow-Energy Analog Reservoir Computing via Reconfigurable 2-Transistor Memory,' has been accepted for publication in Advanced Science.",
+  },
+  {
     day: '09',
     month: '02',
     year: '2026',

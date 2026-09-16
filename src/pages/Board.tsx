@@ -22,6 +22,13 @@ interface NewsItem {
 
 const newsItems: NewsItem[] = [
   {
+    id: 2,
+    date: '2026.09.16',
+    title: "Yeong-In Kim's Paper Accepted in Advanced Science",
+    category: 'Publication',
+    content: "Congratulations to Yeong-In Kim! Her paper, 'Ultralow-Energy Analog Reservoir Computing via Reconfigurable 2-Transistor Memory,' has been accepted for publication in Advanced Science.",
+  },
+  {
     id: 1,
     date: '2026.02.01',
     title: 'Welcome to LIME Lab',

@@ -5,11 +5,23 @@ import research3D from '@/assets/research-3d-integration.jpg';
 import researchBio from '@/assets/research-bio-electronics.jpg';
 import kcs2026 from '@/assets/KCS_2026.jpg';
 import vasscaa2026 from '@/assets/Vasscaa_2026.jpg';
+import labBirthday from '@/assets/lab_birthday.jpg';
+import labDinner from '@/assets/lab_dinner.jpg';
 
 const galleryItems = [
   {
     src: vasscaa2026,
     title: 'Vasscaa2026 Conference',
+    date: '2026-01-30'
+  },
+  {
+    src: labBirthday,
+    title: "Professor's Birthday",
+    date: '2026-01-30'
+  },
+  {
+    src: labDinner,
+    title: 'Team Dining',
     date: '2026-01-30'
   },
   {

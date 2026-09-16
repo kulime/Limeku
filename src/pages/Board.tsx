@@ -9,6 +9,8 @@ import research3D from '@/assets/research-3d-integration.jpg';
 import researchBio from '@/assets/research-bio-electronics.jpg';
 import kcs2026 from '@/assets/KCS_2026.jpg';
 import vasscaa2026 from '@/assets/Vasscaa_2026.jpg';
+import labBirthday from '@/assets/lab_birthday.jpg';
+import labDinner from '@/assets/lab_dinner.jpg';
 
 interface NewsItem {
   id: number;
@@ -30,6 +32,8 @@ const newsItems: NewsItem[] = [
 
 const galleryImages = [
   { src: vasscaa2026, alt: 'Vasscaa2026 Conference', caption: 'Vasscaa2026 Conference' },
+  { src: labBirthday, alt: "Professor's Birthday", caption: "Professor's Birthday" },
+  { src: labDinner, alt: 'Team Dining', caption: 'Team Dining' },
   { src: kcs2026, alt: 'Lab Equipment', caption: 'KCS2026 Conference' },
 ];
 
@@ -47,20 +51,20 @@ const GalleryContent = () => {
       <div ref={galleryRef} className="section-container">
         {/* Section Title */}
         <h2 className="text-3xl font-bold text-black text-center mb-10 animate-fade-in">Gallery</h2>
-        <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {galleryImages.map((image, index) => (
-            <div 
+            <div
               key={index}
-              className="break-inside-avoid group overflow-hidden"
+              className="group overflow-hidden"
             >
               <div className={cn(
-                "overflow-hidden",
+                "overflow-hidden aspect-[4/3]",
                 galleryInView ? 'animate-fade-in-image' : 'opacity-0'
               )}>
-                <img 
-                  src={image.src} 
+                <img
+                  src={image.src}
                   alt={image.alt}
-                  className="w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
               <p className={cn(

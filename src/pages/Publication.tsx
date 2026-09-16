@@ -73,6 +73,13 @@ const highlightedPublications: PublicationItem[] = [
 
 const journalPublications: Publication[] = [
     {
+    title: 'Ultralow-Energy Analog Reservoir Computing via Reconfigurable 2-Transistor Memory',
+    authors: 'Jeong-Min Park†, Yeong-In Kim†, Jeong Hyun Yoon, Sein Lee, Wooho Ham, Dongyun Lee, Junseo Lee, Dongwook Shin, Kyung Jun Park, Seok Daniel Namgung, Min-Kyu Song*, Jang-Yeon Kwon*',
+    journal: 'Advanced Science',
+    volume: 'Accepted',
+    year: 2026,
+    },
+    {
     title: 'Recent Progress of Oxide Semiconductor-Based Artificial Synaptic Transistors',
     authors: 'Sein Lee, Jeong-Min Park, Wooho Ham, Junseo Lee, Gyeong-Hun Hwang, Seok Daniel Namgung, Min-Kyu Song, Jang-Yeon Kwon*',
     journal: 'ACS Applied Electronic Materials',

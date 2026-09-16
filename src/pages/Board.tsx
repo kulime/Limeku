@@ -8,6 +8,7 @@ import researchAI from '@/assets/research-ai-hardware.jpg';
 import research3D from '@/assets/research-3d-integration.jpg';
 import researchBio from '@/assets/research-bio-electronics.jpg';
 import kcs2026 from '@/assets/KCS_2026.jpg';
+import vasscaa2026 from '@/assets/Vasscaa_2026.jpg';
 
 interface NewsItem {
   id: number;
@@ -28,6 +29,7 @@ const newsItems: NewsItem[] = [
 ];
 
 const galleryImages = [
+  { src: vasscaa2026, alt: 'Vasscaa2026 Conference', caption: 'Vasscaa2026 Conference' },
   { src: kcs2026, alt: 'Lab Equipment', caption: 'KCS2026 Conference' },
 ];
 

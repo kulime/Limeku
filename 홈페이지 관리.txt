@@ -1,4 +1,4 @@
-홈페이지 관리
+홈페이지 관리(구글 공용 아이디)
 닉네임: Limeku
 
 Vercel
@@ -13,7 +13,7 @@ open folder로 웹사이트 파일 열기
 npm run dev  //홈페이지 수정 시뮬, Ctrl 주소 클릭해서 확인
 Ctrl c  //나가기
 
-//홈페이지 수정
+//홈페이지 에서 수정
 git add .
 git commit -m "수정사항"
 git push 

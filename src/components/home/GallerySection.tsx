@@ -4,10 +4,16 @@ import researchAI from '@/assets/research-ai-hardware.jpg';
 import research3D from '@/assets/research-3d-integration.jpg';
 import researchBio from '@/assets/research-bio-electronics.jpg';
 import kcs2026 from '@/assets/KCS_2026.jpg';
+import vasscaa2026 from '@/assets/Vasscaa_2026.jpg';
 
 const galleryItems = [
-  { 
-    src: kcs2026, 
+  {
+    src: vasscaa2026,
+    title: 'Vasscaa2026 Conference',
+    date: '2026-01-30'
+  },
+  {
+    src: kcs2026,
     title: 'KCS2026 Conference',
     date: '2026-01-30'
   },

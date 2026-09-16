@@ -35,7 +35,7 @@ const professor = {
 
 const currentMembers: MemberProps[] = [
   { name: 'Gyeong-Hun Hwang', role: 'Integrated M.S. & Ph.D. student', email: 'ghhwang12@korea.ac.kr', researchField: 'Oxide Semiconductor & Ferroelectric Devices', image: hwang},
-  { name: 'Yeong-In Kim (Lab Manager)', role: 'M.S. Student', email: 'yeonginkim1325@korea.ac.kr', researchField: 'Synaptic Devices & 2D Material Devices'},
+  { name: 'Yeong-In Kim (Lab Manager)', role: 'M.S. Student', email: 'yeonginkim1325@korea.ac.kr', researchField: '2D Materials and Devices & Emerging Computing Architecture'},
 ];
 
 const alumni: MemberProps[] = [
@@ -55,9 +55,16 @@ const MemberCard = ({ name, role, email, image, researchField }: MemberProps) =>
     </div>
     <h3 className="font-semibold text-foreground mb-1 text-sm sm:text-base break-words w-full">{name}</h3>
     <p className="text-xs sm:text-sm text-muted-foreground mb-1 break-words w-full">{role}</p>
-    <div className="min-h-5 sm:h-6 flex items-center">
+    <div className="min-h-10 sm:min-h-12 flex flex-col items-center justify-center gap-1">
       {researchField ? (
-        <p className="text-xs text-accent font-medium break-words">{researchField}</p>
+        researchField.split(' & ').map((field, i) => (
+          <span
+            key={i}
+            className="text-[10px] sm:text-xs text-accent font-medium bg-accent/10 rounded-full px-2 py-0.5 break-words"
+          >
+            {field}
+          </span>
+        ))
       ) : (
         <span className="text-xs text-transparent">—</span>
       )}

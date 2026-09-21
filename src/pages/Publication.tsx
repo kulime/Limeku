@@ -80,6 +80,14 @@ const journalPublications: Publication[] = [
     year: 2026,
     },
     {
+    title: 'Ion intercalation across dimensional regimes: from 3D to 0D hosts',
+    authors: 'Jiman Kim†, Jinjin Kim†, Bumjun Kim, Byeongju Kim, Jung-El Ryu, Min-Kyu Song*, Tae Joon Park*',
+    journal: 'Advances in Physics: X',
+    volume: 'Vol.11, 2722690 (2026)',
+    year: 2026,
+    doi: 'https://doi.org/10.1080/23746149.2026.2722690',
+    },
+    {
     title: 'Recent Progress of Oxide Semiconductor-Based Artificial Synaptic Transistors',
     authors: 'Sein Lee, Jeong-Min Park, Wooho Ham, Junseo Lee, Gyeong-Hun Hwang, Seok Daniel Namgung, Min-Kyu Song, Jang-Yeon Kwon*',
     journal: 'ACS Applied Electronic Materials',
@@ -569,7 +577,8 @@ const Publication = () => {
                         const primaryName = 'Min-Kyu Song'; // 밑줄 + 볼드 대상
                         const otherTargetNames = [
                           'Gyeong-Hun Hwang',
-                          'Yeong-In Kim' // 새로 추가될 이름들
+                          'Yeong-In Kim',
+                          'Jinjin Kim' // 새로 추가될 이름들
                         ];
 
                         // 모든 타겟 이름을 합쳐서 정규식 패턴을 만듭니다.

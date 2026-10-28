@@ -6,7 +6,7 @@ import { cn } from '@/lib/utils';
 import { ExternalLink, GraduationCap, Briefcase } from 'lucide-react';
 import professorImage from '@/assets/professor.jpg';
 import hwang from '@/assets/hwang.jpg';
-import kim from '@/assets/kim.png';
+import kim from '@/assets/kim.jpg';
 
 interface MemberProps {
   name: string;
@@ -34,8 +34,8 @@ const professor = {
 };
 
 const currentMembers: MemberProps[] = [
+  { name: 'Yeong-In Kim (Lab Manager)', role: 'Integrated M.S. & Ph.D. student', email: 'yeonginkim1325@korea.ac.kr', researchField: '2D Materials and Devices & Emerging Computing Architecture', image: kim},
   { name: 'Gyeong-Hun Hwang', role: 'Integrated M.S. & Ph.D. student', email: 'ghhwang12@korea.ac.kr', researchField: 'Oxide Semiconductor & Ferroelectric Devices', image: hwang},
-  { name: 'Yeong-In Kim (Lab Manager)', role: 'M.S. Student', email: 'yeonginkim1325@korea.ac.kr', researchField: '2D Materials and Devices & Emerging Computing Architecture'},
 ];
 
 const alumni: MemberProps[] = [

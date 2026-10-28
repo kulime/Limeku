@@ -7,8 +7,14 @@ import kcs2026 from '@/assets/KCS_2026.jpg';
 import vasscaa2026 from '@/assets/Vasscaa_2026.jpg';
 import labBirthday from '@/assets/lab_birthday.jpg';
 import labDinner from '@/assets/lab_dinner.jpg';
+import kcersFall2026 from '@/assets/KCerS_Fall_2026.jpg';
 
 const galleryItems = [
+  {
+    src: kcersFall2026,
+    title: '2026 Fall Meeting of the Korean Ceramic Society',
+    date: '2026-09-30'
+  },
   {
     src: vasscaa2026,
     title: 'Vasscaa2026 Conference',

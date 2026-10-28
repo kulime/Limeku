@@ -11,6 +11,7 @@ import kcs2026 from '@/assets/KCS_2026.jpg';
 import vasscaa2026 from '@/assets/Vasscaa_2026.jpg';
 import labBirthday from '@/assets/lab_birthday.jpg';
 import labDinner from '@/assets/lab_dinner.jpg';
+import kcersFall2026 from '@/assets/KCerS_Fall_2026.jpg';
 
 interface NewsItem {
   id: number;
@@ -38,6 +39,7 @@ const newsItems: NewsItem[] = [
 ];
 
 const galleryImages = [
+  { src: kcersFall2026, alt: '2026 Fall Meeting of the Korean Ceramic Society', caption: '2026 Fall Meeting of the Korean Ceramic Society' },
   { src: vasscaa2026, alt: 'Vasscaa2026 Conference', caption: 'Vasscaa2026 Conference' },
   { src: labBirthday, alt: "Professor's Birthday", caption: "Professor's Birthday" },
   { src: labDinner, alt: 'Team Dining', caption: 'Team Dining' },
